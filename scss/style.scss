@@ -1,5 +1,44 @@
-
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+button{
+	background: none;
+	border: none;
+}
 .ba-main-wrapper{
 	min-height: 100vh;
 	display: flex;
+	flex-wrap: wrap;
+}
+.ba-toolbar {
+	padding: 15px 0;
+	border: 2px solid #f8f8f8;
+	&-wrapper{
+		display: flex;
+		align-items: center;
+	}
+}
+
+.ba-breadcrumbs{
+	&__list{
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	&__item{}
+
+	&__item + &__item{
+		&:before{
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			font-size: 1rem;
+			content: '\f105';
+			margin: 2px .75rem 0 1rem;
+			display: inline-block;
+		}
+	}
+}
+.ba-search{
+	margin-left: auto;
 }
