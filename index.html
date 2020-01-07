@@ -35,10 +35,10 @@
                 </div>
                 <nav>
                     <ul class="ba-menu">
-                        <li class="ba-menu__item ba-menu__item-user">
+                        <li class="ba-menu__item ba-menu__item-user hidden-md">
                             <div class="ba-user">
-                                <a href="#">
-                                    <img src="images/user.png" alt="Lauren">
+                                <a href="#" class="ba-user__link">
+                                    <img src="images/user.png" class="ba-user__photo" alt="Lauren">
                                     <span class="ba-user__name">Hello Lauren</span>
                                 </a>
                                 <button id = "showUserMenu">
@@ -97,14 +97,17 @@
                         </ul>
                     </nav>
                     <div class="ba-search">
+                        <button class="hidden-md" id="showSearch" aria-label="show search">
+                            <i class="fas fa-search"></i>
+                        </button>
                         <form action="" class="ba-search-form">
-                            <input type="search" placeholder='Search'>
+                            <input type="search" class="ba-search_input" placeholder='Search'>
                             <button aria-label="search">
                                 <i class="fas fa-search"></i>
                             </button>
                         </form>
                     </div>
-                    <div class="ba-notification-wrapper">
+                    <div class="ba-notification-wrapper hidden-sm">
                         <button aria-label="new message">
                             <i class="fas fa-envelope"></i>
                         </button>
@@ -112,9 +115,9 @@
                             <i class="fas fa-bell"></i>
                         </button>
                     </div>
-                    <div class="ba-user">
-                        <a href="#">
-                            <img src="images/user.png" alt="Lauren">
+                    <div class="ba-user hidden-sm">
+                        <a href="#" class="ba-user__link">
+                            <img src="images/user.png" class="ba-user__photo" alt="Lauren">
                             <span class="ba-user__name">Hello Lauren</span>
                         </a>
                         <button id = "showUserMenu">

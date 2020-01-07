@@ -6,13 +6,17 @@ button{
 	border: none;
 }
 .ba-main-wrapper{
-	min-height: 100vh;
 	display: flex;
 	flex-wrap: wrap;
+
+	@media screen and (min-width: 991px){
+		min-height: 100vh;
+	}
 }
 .ba-toolbar {
 	padding: 15px 0;
 	border: 2px solid #f8f8f8;
+	position: relative;
 	&-wrapper{
 		display: flex;
 		align-items: center;
@@ -26,7 +30,9 @@ button{
 		margin: 0;
 		padding: 0;
 	}
-	&__item{}
+	&__item{
+		font-weight: bold;
+	}
 
 	&__item + &__item{
 		&:before{
@@ -41,4 +47,52 @@ button{
 }
 .ba-search{
 	margin-left: auto;
+	&-form{
+		position: fixed;
+		transform: translateY(-100%);
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: .5rem 1rem;
+		background-color: #fff;
+		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.5);
+		display: flex;
+		transition: transform .3s;
+		
+		&.open {
+			position: absolute;
+			top: 100%;
+			transform: translateY(0);
+		}
+
+		@media screen and (min-width: 991px){
+			position: static;
+			width: auto;
+			padding: 0;
+			transform: none;
+			box-shadow: none;
+		}
+	}
+
+	&__input{
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		margin-right: 0.5rem;
+	}
+}
+.ba-user{
+	display: flex;
+	align-items: center;
+	&__link{
+		display: flex;
+		align-items: center;
+		color:#fff;
+		.ba-toolbar & {
+			color: $primaryColor;
+		}
+	}
+	&__photo{
+		margin-right: 1rem;
+	}
 }

@@ -122,19 +122,21 @@ $btnBorderColor: $primaryColor;
         width: 8.33%;
     }
     .hidden-md{
-        display: none;
+        display: none !important;
     }
 }
 
+@media screen and (max-width: 991px){
+    .hidden-sm{
+        display: none !important;
+    }
+}
 // mixins
 @mixin buttonHover {
     background-color: pink;
     border-color: darken($btnBorderColor, 15%)
 
 }
-
-
-
 
 /* ba-common */
 

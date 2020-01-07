@@ -15,6 +15,19 @@ $(document).ready(function() {
             $('.ba-menu').removeClass('open').hide();
         }
     })
+    $('#showSearch').on('click', function(){
 
+        let searchForm = $('.ba-search-form');
+        // let toolbar = $('.ba-toolbar');
+
+        // if(!searchFrom.hasClass('open')){
+
+        //     let searchPositionY = toolbar.offset().top + toolbar.innerHeight();
+        //     searchFrom.css('transform', 'translateY(' + searchPositionY + 'px)' );
+        // } else {
+        //     searchFrom.css('transform', 'translateY(-100%)')
+        // }
+        searchForm.toggleClass('open');
+    })
 
 })
